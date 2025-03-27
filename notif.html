@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.css">
+  <script src="src/notif.js" defer></script>
+  <script src="src/timer.js" defer></script>
+  <title>Vite App</title>
+</head>
+<body>
+<div id="app" class="w-full">
+  <main class="relative w-[900px] h-[600px] mx-auto my-[30px] bg-red-400">
+    <img id="imageNotif" src="assets/imgs/notif.jpg" class="h-full mx-auto">
+    <div class="absolute w-[212.5px] h-[350px] right-[32px] bottom-[108px] overflow-scroll">
+      <div id="message0" class="max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Coucou
+      </div>
+      <div id="message" class="hidden max-w-[60%] bg-gray-300 text-black px-2 py-2 rounded-2xl rounded-br-none shadow-md text-[10px] ml-20 mb-1">
+        Coucou, ça va ?
+      </div>
+      <div id="message1" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi
+      </div>
+      <div id="message2" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Pourquoi tu répond pas ?
+      </div>
+      <div id="message3" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        T'es ou ?
+      </div>
+      <div id="message4" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        T'es avec qui ?
+      </div>
+      <div id="message6" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi ?
+      </div>
+      <div id="message7" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi ?
+      </div>
+      <div id="message8" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi ?
+      </div>
+      <div id="message9" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi ?
+      </div>
+      <div id="message10" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi ?
+      </div>
+      <div id="message11" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi ?
+      </div>
+      <div id="message12" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi ?
+      </div>
+
+      <div id="message13" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi ?
+      </div>
+      <div id="message14" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi ?
+      </div>
+      <div id="message15" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi ?
+      </div>
+      <div id="message16" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi ?
+      </div>
+      <div id="message17" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi ?
+      </div>
+      <div id="message18" class="hidden max-w-[60%] bg-blue-500 text-white px-2 py-2 rounded-2xl rounded-bl-none shadow-md text-[10px] ml-2 mb-1">
+        Tu fais quoi ?
+      </div>
+    </div>
+    <input id="input" type="text" placeholder="Envoyer un message" class="absolute right-[41px] bottom-[76px] w-[162px] rounded-2xl ">
+    <button id="button" type="button" class="absolute flex justify-center items-center h-[25px] w-[25px] right-[41px] bottom-[76px] text-white rounded-2xl">
+      <img src="assets/imgs/envoyer.jpg" class="rounded-2xl">
+    </button>
+  </main>
+  <div id="containerButton" class="justify-center hidden">
+    <a href="notif.html" class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Suivant</a>
+  </div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
