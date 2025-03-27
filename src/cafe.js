@@ -1,5 +1,9 @@
 const containerButton = document.getElementById('containerButton')
 
+let lcGood = parseInt(localStorage.getItem('good'))
+let lcBad = parseInt(localStorage.getItem('bad'))
+let interaction = false
+
 const phrases = [
   "📩 Nouveau message reçu.",
   "🔔 Tu as une nouvelle notification.",
@@ -36,6 +40,11 @@ function createRandomPhrase() {
     localStorage.setItem('canape', 'dark')
     containerButton.classList.remove('hidden')
     containerButton.classList.add('flex')
+    if (!interaction){
+      lcBad++
+      localStorage.setItem('bad', `${lcBad}`)
+    }
+    interaction = true
   })
 
   // Supprimer l'élément après 5 secondes
@@ -51,37 +60,10 @@ setInterval(createRandomPhrase, 4000);
 setInterval(createRandomPhrase, 5000);
 setInterval(createRandomPhrase, 7000);
 
-
-
-let duration = 30;
-let timeLeft = duration;
-let timerInterval;
-
-const timerDisplay = document.createElement("div");
-timerDisplay.className = "fixed top-5 right-5 bg-gray-900 text-white text-2xl font-bold px-6 py-3 rounded-lg shadow-lg";
-document.body.appendChild(timerDisplay);
-
-function updateTimer() {
-  const minutes = Math.floor(timeLeft / 60);
-  const seconds = timeLeft % 60;
-  timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, "0")}`;
-
-  if (timeLeft <= 0) {
-    clearInterval(timerInterval);
-    timerDisplay.textContent = "⏳ Temps écoulé !";
-    containerButton.classList.remove('hidden')
-    containerButton.classList.add('flex')
+function setLocalStorage (condition) {
+  if (!condition){
     localStorage.setItem('canape', 'white')
-  } else {
-    timeLeft--;
+    lcGood++
+    localStorage.setItem('good', `${lcGood}`)
   }
 }
-
-function startTimer() {
-  timeLeft = duration;
-  updateTimer();
-  timerInterval = setInterval(updateTimer, 1000);
-}
-
-startTimer();
-
