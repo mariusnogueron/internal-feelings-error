@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.css">
+  <script src="src/canape.js" defer></script>
+  <title>Vite App</title>
+</head>
+<body>
+<div id="app" class="w-full">
+  <main class="w-[900px] h-[600px] bg-red-400 mx-auto my-[30px] pt-[100px]">
+    <div id="container" class="block relative w-[800px] h-[400px] bg-blue-300 mx-auto ">
+      <div class="flex flex-nowrap h-full">
+        <img src="assets/imgs/canape-gauche.jpg" class="h-full">
+        <img src="assets/imgs/coussin.jpg" class="h-full w-full">
+        <img src="assets/imgs/canape-droit.jpg" class="h-full">
+      </div>
+      <div id="drag" class="block absolute h-[20px] w-[20px] bg-blue-500 bottom-0 right-0"></div>
+    </div>
+  </main>
+  <div id="containerButton" class="justify-center hidden">
+    <a href="notif.html" class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Suivant</a>
+  </div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
