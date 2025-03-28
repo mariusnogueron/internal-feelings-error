@@ -8,6 +8,8 @@ const imageDispute = localStorage.getItem('dispute')
 const alwaysGood = localStorage.getItem('alwaysGood')
 const alwaysBad = localStorage.getItem('alwaysBad')
 
+const imgPreload = new Image();
+imgPreload.src = 'assets/imgs/dispute-collage.jpg';
 
 if (imageDispute === 'dark' && alwaysGood !== 'true'){
   document.getElementById('imageDispute').src = 'assets/imgs/dispute-squared.jpg'
@@ -32,14 +34,14 @@ document.addEventListener("mousemove", (event) => {
     if (!interaction) {
       interaction = true
       document.getElementById('pDispute').innerText = `!#??/[^&*,!#??/[^&*,!#??/[^&*,!#??/[^&*,`
-      document.getElementById('imageDispute').src = 'assets/imgs/dispute-collage.jpg'
+      document.getElementById('imageDispute').src = imgPreload.src
 
       containerButton.classList.remove('hidden')
       containerButton.classList.add('flex')
 
       lcBad++
       localStorage.setItem('bad', `${lcBad}`)
-      localStorage.setItem('dispute', `dark`)
+      localStorage.setItem('mariage', `dark`)
     }
   }
 });

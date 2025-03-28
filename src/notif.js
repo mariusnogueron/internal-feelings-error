@@ -7,6 +7,9 @@ let lcGood = parseInt(localStorage.getItem('good'))
 let lcBad = parseInt(localStorage.getItem('bad'))
 let interaction = false
 
+const imgPreload = new Image();
+imgPreload.src = 'assets/imgs/notif-dark.jpg';
+
 if (lcGood === 2){
   localStorage.setItem('alwaysGood', 'true')
 }
@@ -28,7 +31,7 @@ button.addEventListener('click', ()=>{
   input.value = ''
 
 
-  document.getElementById('imageNotif').src = 'assets/imgs/notif-dark.jpg'
+  document.getElementById('imageNotif').src = imgPreload.src
   afficherMessages();
 
   if (!interaction){
@@ -44,7 +47,7 @@ button.addEventListener('click', ()=>{
 })
 
 function afficherMessages(id = 1) {
-  if (id > 18) return; // Arrête la récursion quand tous les messages sont traités
+  if (id > 8) return; // Arrête la récursion quand tous les messages sont traités
 
   // Sélectionne l'élément et enlève la classe 'hidden'
   const message = document.getElementById(`message${id}`);

@@ -7,12 +7,15 @@
   <link rel="stylesheet" href="src/style.css">
   <script src="src/cafe.js" defer></script>
   <script src="src/timer.js" defer></script>
-  <title>Vite App</title>
+  <title>Internal feeling error</title>
 </head>
 <body>
-<div id="app" class="w-full">
-  <main class="w-[900px] h-[600px] mx-auto my-[30px]">
+<div id="app" class="w-full" z>
+  <main id="containerCafe" class="relative w-[900px] h-[600px] mx-auto my-[30px]">
     <img id="imageCafe" src="assets/imgs/cafe.jpg" class="h-full mx-auto">
+    <img id="notif" src="assets/imgs/cafe-icone.png" class="hidden absolute top-0 left-[100px] h-full z-10">
+
+<!--    <div class="absolute bg-amber-300 top-[150px] left-[450px] h-[300px] w-[300px]"></div>-->
   </main>
   <div  id="containerButton" class="hidden justify-center">
     <a href="canape.html" class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Suivant</a>

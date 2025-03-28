@@ -32,7 +32,14 @@ if (imageType === 'dark'){
   img3.src = 'assets/imgs/canape-droit-squared.png'
 }
 
+const imgPreload1 = new Image();
+imgPreload1.src = 'assets/imgs/canape-gauche-doted.png';
 
+const imgPreload2 = new Image();
+imgPreload2.src = 'assets/imgs/coussin-doted.png';
+
+const imgPreload3 = new Image();
+imgPreload3.src = 'assets/imgs/canape-droit-doted.png';
 
 drag.addEventListener("mousedown", (event) => {
   isResizing = true;
@@ -57,11 +64,11 @@ function resize(event) {
 
   if (newWidth < 550){
 
-    img1.src = 'assets/imgs/canape-gauche-doted.png'
-    img2.src = 'assets/imgs/coussin-doted.png'
+    img1.src = imgPreload1.src
+    img2.src = imgPreload2.src
     img2.classList.add('pt-[7px]')
     img2.classList.add('pb-[7px]')
-    img3.src = 'assets/imgs/canape-droit-doted.png'
+    img3.src = imgPreload3.src
 
     afficherBoutonInteraction()
     if (!interaction){

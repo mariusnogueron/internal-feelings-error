@@ -1,4 +1,4 @@
-let duration = 15;
+let duration = 30;
 let timeLeft = duration;
 let timerInterval;
 

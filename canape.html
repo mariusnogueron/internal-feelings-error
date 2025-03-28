@@ -7,18 +7,20 @@
   <link rel="stylesheet" href="src/style.css">
   <script src="src/canape.js" defer></script>
   <script src="src/timer.js" defer></script>
-  <title>Vite App</title>
+  <title>Internal feeling error</title>
 </head>
 <body>
 <div id="app" class="w-full">
-  <main class="w-[900px] h-[600px] bg-red-400 mx-auto my-[30px] pt-[100px]">
-    <div id="container" class="block relative w-[800px] h-[400px] bg-blue-300 mx-auto ">
+  <main class="w-[900px] h-[600px] mx-auto my-[30px] pt-[100px]">
+    <div id="container" class="block relative w-[800px] h-[400px] mx-auto ">
       <div class="flex flex-nowrap h-full">
         <img id="img1" class="h-full">
         <img id="img2" class="h-full w-full">
         <img id="img3" class="h-full">
       </div>
-      <div id="drag" class="block absolute h-[20px] w-[20px] bg-blue-500 bottom-0 right-0"></div>
+      <div id="drag" class="block absolute h-[40px] w-[40px]  bottom-0 right-0 cursor-grab rounded-lg">
+        <img src="assets/imgs/icons8-drag-left-arrow-48.png" class="h-full w-full">
+      </div>
     </div>
   </main>
   <div id="containerButton" class="justify-center hidden">
