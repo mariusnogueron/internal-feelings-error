@@ -24,8 +24,9 @@ function createRandomPhrase() {
   element.textContent = phrase;
 
   // Ajout des classes Tailwind
-  element.className = "absolute bg-black/70 text-white px-4 py-2 rounded-md text-lg font-medium shadow-lg transition-transform scale-90";
+  element.className = "absolute bg-black/70 text-blue-500 px-4 py-2 rounded-md text-lg font-medium shadow-lg transition-transform scale-90 underline";
   element.classList.add('notifDetector')
+
 
   // Position aléatoire
   const x = Math.random() * (window.innerWidth - 200); // Largeur max - marge
@@ -43,6 +44,7 @@ function createRandomPhrase() {
     if (!interaction){
       lcBad++
       localStorage.setItem('bad', `${lcBad}`)
+      document.getElementById('imageCafe').src = 'assets/imgs/cafe-doted.png'
     }
     interaction = true
   })

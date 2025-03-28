@@ -7,9 +7,19 @@ let lcGood = parseInt(localStorage.getItem('good'))
 let lcBad = parseInt(localStorage.getItem('bad'))
 let interaction = false
 
-const localStorageNotif = localStorage.getItem('notif')
+if (lcGood === 2){
+  localStorage.setItem('alwaysGood', 'true')
+}
 
-if (localStorageNotif === 'dark'){
+if (lcBad === 2){
+  localStorage.setItem('alwaysBad', 'true')
+}
+
+const localStorageNotif = localStorage.getItem('notif')
+const alwaysGood = localStorage.getItem('alwaysGood')
+const alwaysBad = localStorage.getItem('alwaysBad')
+
+if (localStorageNotif === 'dark' || alwaysBad === 'true'){
   document.getElementById('imageNotif').src = 'assets/imgs/notif-doted.png'
 }
 
@@ -21,11 +31,16 @@ button.addEventListener('click', ()=>{
   document.getElementById('imageNotif').src = 'assets/imgs/notif-dark.jpg'
   afficherMessages();
 
+  if (!interaction){
+    lcBad++
+    localStorage.setItem('bad', `${lcBad}`)
+    localStorage.setItem('dispute', `dark`)
+  }
+
   interaction = true
 
-  lcBad++
-  localStorage.setItem('bad', `${lcBad}`)
-  localStorage.setItem('dispute', `dark`)
+  containerButton.classList.remove('hidden')
+  containerButton.classList.add('flex')
 })
 
 function afficherMessages(id = 1) {

@@ -24,6 +24,14 @@ if (imageType === 'white'){
   img3.src = 'assets/imgs/canape-droit.jpg'
 }
 
+if (imageType === 'dark'){
+  img1.src = 'assets/imgs/canape-gauche-squared.png'
+  img2.src = 'assets/imgs/coussin-squared.png'
+  img2.classList.add('pt-[7px]')
+  img2.classList.add('pb-[7px]')
+  img3.src = 'assets/imgs/canape-droit-squared.png'
+}
+
 
 
 drag.addEventListener("mousedown", (event) => {
@@ -48,6 +56,13 @@ function resize(event) {
   }
 
   if (newWidth < 550){
+
+    img1.src = 'assets/imgs/canape-gauche-doted.png'
+    img2.src = 'assets/imgs/coussin-doted.png'
+    img2.classList.add('pt-[7px]')
+    img2.classList.add('pb-[7px]')
+    img3.src = 'assets/imgs/canape-droit-doted.png'
+
     afficherBoutonInteraction()
     if (!interaction){
       localStorage.setItem('notif', 'dark')
