@@ -15,6 +15,7 @@ if ((alwaysGood !== 'true' && lcBad > lcGood) || alwaysBad ==='true' ){
 }
 
 buttonPopup.addEventListener('click', ()=>{
+  buttonPopup.classList.remove('z-50')
   popup.classList.remove('hidden')
   popup.classList.add('flex')
 })
